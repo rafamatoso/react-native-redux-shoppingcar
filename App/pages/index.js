@@ -31,7 +31,7 @@ const tabHomeNavigation = () => (
     <Tab.Screen
       options={{
         tabBarIcon: ({ color }) => (
-          <MaterialIcons name="directions-car" size={24} color={color} />
+          <MaterialIcons name="directions-car" size={23} color={color} />
         )
       }}
       name="Carros"
@@ -50,7 +50,7 @@ const tabHomeNavigation = () => (
       options={{
         tabBarIcon: ({ color }) => (
           <View>
-            <MaterialIcons name="add-shopping-cart" size={24} color={color} />
+            <MaterialIcons name="add-shopping-cart" size={23} color={color} />
             <Bagde />
           </View>
         )
@@ -71,7 +71,7 @@ function App() {
           },
           headerTitle: (
             <Text style={{ fontSize: 23, color: '#fff', fontWeight: 'bold' }}>
-              Shoppging Car
+              Shopping Car
             </Text>
           )
         }}
