@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 
+import Login from './Login';
 import Add from './Add';
 import List from './List';
 import Cart from './Cart';
@@ -45,6 +46,15 @@ const tabHomeNavigation = () => (
       }}
       name="Adicionar"
       component={Add}
+    />
+    <Tab.Screen
+      options={{
+        tabBarIcon: ({ color }) => (
+          <MaterialIcons name="account-circle" size={23} color={color} />
+        )
+      }}
+      name="Login"
+      component={Login}
     />
     <Tab.Screen
       options={{

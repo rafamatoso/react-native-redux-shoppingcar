@@ -3,8 +3,9 @@ import { FlatList, View } from 'react-native';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { allCars } from '../../store/fetchActions';
-
 import { addItem } from '../../store/ducks/cart';
+
+import { showMessage } from 'react-native-flash-message';
 
 import Car from '../../components/Car';
 
@@ -18,6 +19,11 @@ export default function List() {
 
   function addItemCart(item) {
     dispatch(addItem(item));
+
+    showMessage({
+      message: `${item.name} adicionado com sucesso!`,
+      type: 'success'
+    });
   }
 
   return (
